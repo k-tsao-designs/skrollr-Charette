@@ -5,39 +5,45 @@
 	<link rel="stylesheet" href="css/main.css" />
 	<script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
 	<script src="js/script.js"></script>
-	<style>
+		<style>
 		.sections{
-			height:200%;
+			height:100%;
 		}
 
 		.section{
-			height:50%;
+			height:100%;
 		}
 
 		#section1{
-			background-color: blue;
-		}
-
-		#section2 {
 			background-color: black;
-			top: 50%;
 		}
 
+		.box {
+			position: relative;
+			top:40%;
+			left: 50%;
+			width:200px;
+			height: 200px;
+			background-color: yellow;
+		}
+
+		.marker {
+			color:	#D0D0D0;
+		}
 	</style>
 </head>
 <body>
 
 	<div class="skrollr-container">
-		<div class = "sections"
-		data-0="transform:translate(0%,0%)"
-		data-1000p="transform:translate(0,-50%)">
+		<div class = "sections">
 			<div id="section1" class="section">
-			</div>
-
-			<div id="section2" class="section">
+				<div class="box"
+				data-0="transform:rotate(0deg);"
+				data-1000p="transform:rotate(6000deg);">
+				</div>
 			</div>
 	
-		<a href="002.html">
+		<a href="006.html">
 			<div class="next">
 				Next
 			</div>
