@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	
+	<link rel="stylesheet" href="css/main.css" />
+	<script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+	<script src="js/script.js"></script>
+		<style>
+
+		#section1{
+			background-color: white;
+		}
+
+		.box {
+			position: absolute;
+			top: 10%;
+			left: 14%;
+			width:800px;
+			height: 500px;
+		}
+
+		.next {
+			color: black;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="skrollr-container">
+		<div class = "sections">
+			<div id="section1" class="section">
+				<img class="box" 
+				src="images/day-eiffel.jpg" 
+				alt="Eiffel Tower, Day View"
+				data-0="opacity:1;"
+				data-50p="opacity:0;"
+				data-100p="opacity:1;"
+				data-175p="opacity:0;"
+				data-200p="opacity:1;"
+				data-300p="opacity:0;"
+				data-360p="opacity:1;"
+				data-500p="opacity:0;"
+				data-600p="opacity:1;"
+				data-1000p="opacity:0;"
+				>
+
+				<img class="box" 
+				src="images/night-eiffel.jpg" 
+				alt="Eiffel Tower, Night View"
+				data-0="opacity:0;"
+				data-1000p="opacity:1;">
+	
+			<a href="022.html">
+				<div class="next">
+					Next
+				</div>
+			</a>
+
+			</div>
+		</div>
+
+		<div id="helper">
+			<div class="marker">1</div>
+			<div class="marker">2</div>
+			<div class="marker">3</div>
+			<div class="marker">4</div>
+			<div class="marker">5</div>
+			<div class="marker">6</div>
+			<div class="marker">7</div>
+			<div class="marker">8</div>
+			<div class="marker">9</div>
+			<div class="marker">10</div>
+			<!--why is it not scrolling through the marker this time?-->
+		</div>
+	</div>
+
+<script src="js/skrollr.min.js">
+</script>
+
+<script type="text/javascript">
+	var s = skrollr.init({
+	render: function(data) {
+	//Debugging - Log the current scroll position.
+	console.log(data.curTop);
+}
+});
+</script>
+
+</body>
+</html>
