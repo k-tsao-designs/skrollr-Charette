@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	
+	<link rel="stylesheet" href="css/main.css" />
+	<script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+	<script src="js/script.js"></script>
+		<style>
+
+		#section1{
+			background-color: white;
+		}
+
+		.box {
+			position: absolute;
+			top:0px;
+			left: 0px;
+			width:50px;
+			background-color: steelblue;
+		}
+
+		.next {
+			color: black;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="skrollr-container">
+		<div class = "sections">
+			<div id="section1" class="section">
+				<div class="box"
+				data-0="height:0%; width:10%"
+				data-500p="height:100%; width: 10%;"
+				data-1000p="width:100%;"
+				>
+				</div>
+			</div>
+	
+			<a href="019.html">
+				<div class="next">
+					Next
+				</div>
+			</a>
+		</div>
+
+		<div id="helper">
+			<div class="marker">1</div>
+			<div class="marker">2</div>
+			<div class="marker">3</div>
+			<div class="marker">4</div>
+			<div class="marker">5</div>
+			<div class="marker">6</div>
+			<div class="marker">7</div>
+			<div class="marker">8</div>
+			<div class="marker">9</div>
+			<div class="marker">10</div>
+		</div>
+	</div>
+
+<script src="js/skrollr.min.js">
+</script>
+
+<script type="text/javascript">
+	var s = skrollr.init({
+	render: function(data) {
+	//Debugging - Log the current scroll position.
+	console.log(data.curTop);
+}
+});
+</script>
+
+</body>
+</html>
