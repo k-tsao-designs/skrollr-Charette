@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	
+	<link rel="stylesheet" href="css/main.css" />
+	<script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+	<script src="js/script.js"></script>
+		<style>
+
+		body {
+			background-color: whitesmoke;
+			height: 450%;
+		}
+
+		.skrollr-container {
+			width: 60%;
+			margin-left: 200px;
+		}
+
+		.next {
+			color: red;
+			position: relative;
+			padding-left: 500px;
+		}
+
+		#red, #blue {
+			width:128px;
+			height:128px;
+		}
+
+		#red {
+			float:left;
+			position: absolute;
+			margin:20px;
+			background-color: red;
+			margin-top: 800px;
+		}
+
+		#blue {
+			margin-top:20px;
+			background-color: blue;
+		}
+
+		#blue_wrapper {
+			position:fixed;
+			top:0;
+			right:20px;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="skrollr-container">
+
+<!--RED (buddy)-->
+	<div id="red" data-bottom="transform:translate(1000px,-250px);" data-top="transform:translate(0px,0px);"></div>
+
+<a class="next" href="036.html">
+	Next
+</a>
+
+</div>
+
+	<!--Blue box, scrolling down screen-->
+		<div id="blue_wrapper" data-smooth-scrolling="off">
+			<div id="blue"
+				data-anchor-target="#red"
+				data-0="background-position:!0 bottom;margin-top:20px;"
+				data-bottom-top="margin-right[vibrate]:0px;background-position:!0 0;"
+				data-top-bottom="margin-right[vibrate]:20px;background-position:!0 bottom;margin-top:500px;"></div>
+		</div>
+
+
+
+<script src="js/skrollr.min.js">
+</script>
+
+<script type="text/javascript">
+	skrollr.init({
+		forceHeight: false,
+			easing: {
+				vibrate: function(p) {
+					return Math.sin(p * 10 * Math.PI);
+				}
+			}
+	});
+</script>
+
+</body>
+</html>
